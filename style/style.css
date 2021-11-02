@@ -432,7 +432,7 @@ section div.augusto-backes-wrapper{
 
     /* Black friday */
     section#black-friday{
-        margin-top: 15vh;
+        margin-top: 18vh;
     }
     
     section div.black-friday-wrapper{
@@ -475,4 +475,9 @@ section div.augusto-backes-wrapper{
         justify-content: space-between;
         flex-direction: column-reverse;
      }
+
+     #augusto-backes,#promocao{
+        background: url('../imagens/bg_image_mobile.jpg') no-repeat center center;
+        background-attachment: fixed;
+    }
 }

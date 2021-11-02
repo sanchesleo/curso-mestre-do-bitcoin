@@ -1,25 +1,24 @@
 import ScrollSuave from "./modules/scroll_suave.js";
 
 const btnMobile = document.querySelector('.check-btn');
-let openMenu = false;
-
 const iconMobile = document.querySelector('.fas');
 
 function handleRenderMenu() {
-    openMenu = !openMenu;
-    console.log(openMenu);
+
     const navMenu = document.querySelector('.lista-menu');
     navMenu.classList.toggle('active');
 
     console.log(iconMobile);
 
-    if (openMenu) {
+    console.log(iconMobile.classList.contains('fa-bars'))
+    if (iconMobile.classList.contains('fa-bars')) {
         iconMobile.classList.remove('fa-bars');
         iconMobile.classList.add('fa-times');
-    }else{
-        iconMobile.classList.add('fa-bars');
-        iconMobile.classList.remove('fa-times');
+    }else if (iconMobile.classList.contains('fa-times')) { 
+       iconMobile.classList.add('fa-bars');
+       iconMobile.classList.remove('fa-times');
     }
+   
 }
 
 btnMobile.addEventListener('click',handleRenderMenu);

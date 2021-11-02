@@ -6,7 +6,7 @@ export default class ScrollSuave {
       } else {
         this.options = options;
       }
-  
+      
       this.scrollToSection = this.scrollToSection.bind(this);
     }
   
@@ -14,7 +14,14 @@ export default class ScrollSuave {
       event.preventDefault();
       const href = event.currentTarget.getAttribute('href');
       const section = document.querySelector(href);
-  
+
+      const navMenu = document.querySelector('.lista-menu');
+      navMenu.classList.remove('active');
+
+      const iconMobile = document.querySelector('.fas');
+      iconMobile.classList.remove('fa-times');
+      iconMobile.classList.add('fa-bars');
+
       section.scrollIntoView(this.options);
     }
   
