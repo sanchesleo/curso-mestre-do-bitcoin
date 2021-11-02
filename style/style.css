@@ -6,6 +6,8 @@ body{
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto Condensed', sans-serif;
+
+    background-color: #F5FEFD;
 }
 
 a{
@@ -16,7 +18,7 @@ ul{
     list-style: none;
 }
 
-
+/*Estilização Header*/
 .container-title{
     display: flex;
     flex-direction: column;
@@ -32,6 +34,8 @@ header{
     padding: 1.5rem;
     box-sizing: border-box;
     
+    max-height: 168px;
+    height: 100%;
 }
 
 header h1.main-title{
@@ -104,11 +108,71 @@ ul.lista-menu li a:hover:after {
     display: none;
 }
 
+/*Fecha estilização Header*/
+
+/* Estilização Black Fiday */
+section#black-friday{
+    width: 75vw;
+    margin: 0 auto;
+    padding: 0;
+}
+
+section#black-friday h1{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+section div.black-friday-wrapper{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+
+div.main-banner img{
+    max-width: 500px;
+    width: 100%;
+    border: 5px solid #FFC138;
+}
+
+div.main-text-container{
+    width: 50%;
+}
+
+div.main-text-container h3{
+    color: #FFC138;
+    font-size: 1.3rem;
+}
+
+div.main-text-container p{
+    margin: 20px 0;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+div.main-text-container button{
+    background: #000000;
+    border: 5px solid #FFC138;
+    padding: 1rem 6rem;
+    box-sizing: border-box;
+    border-radius: 15px;
+    transition: all .5s;
+}
+
+div.main-text-container button:hover{
+    filter: opacity(.9);
+}
+
+div.main-text-container button a{
+    color: #F5FEFD;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
 /* Media queries*/
 
 /* Tablets e notebooks */
-@media only screen 
-  and (min-device-width: 760px) 
+@media (min-device-width: 760px) 
   and (max-device-width: 1024px) {
     body{
         overflow: hidden;
@@ -122,11 +186,33 @@ ul.lista-menu li a:hover:after {
         font-size: 1.2rem;
         margin: 0 2rem;
     }
+
+    /*black friday*/
+    div.main-banner img{
+        max-width: 260px;
+        border: 5px solid #FFC138;
+    }
+
+    div.main-text-container h3{
+        font-size: 1.2rem;
+    }
+    
+    div.main-text-container p{
+        font-size: 1rem;
+    }
+
+    div.main-text-container button{
+        padding: 1rem 4rem;
+    }
+
+    
+    div.main-text-container button a{
+        font-size: 1rem;
+    }
 }
 
 /* celulares */
-@media only screen 
-  and (min-device-width: 200px) 
+@media (min-device-width: 200px) 
   and (max-device-width: 759px)
   {
     .container-title{
@@ -180,5 +266,22 @@ ul.lista-menu li a:hover:after {
         color: #F5FEFD;
         margin-right: 20px;
     }
+
+    /* Black friday */
+    section div.black-friday-wrapper{
+        flex-direction: column;
+     }
+
+     div.main-text-container{
+        width: 100%;
+    }
+
+    div.main-text-container button{
+        padding: 1rem 3rem;
+    }
+
     
+    div.main-text-container button a{
+        font-size: 0.8rem;
+    }
 }
