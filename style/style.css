@@ -13,7 +13,9 @@ body{
 
     background-color: #F5FEFD;
 }
-
+p{
+    text-transform: uppercase;
+}
 a{
     text-decoration: none;
 }
@@ -112,12 +114,6 @@ ul.lista-menu li a:hover:after {
 /*Fecha estilização Header*/
 
 /* Estilização Black Fiday */
-section#black-friday{
-    width: 75vw;
-    margin: 0 auto;
-    padding: 0;
-}
-
 h1.section-title{
     text-decoration: underline;
     font-weight: bold;
@@ -126,7 +122,7 @@ h1.section-title{
 section div.black-friday-wrapper{
    display: flex;
    align-items: center;
-   justify-content: space-between;
+   gap: 3rem;
 }
 
 
@@ -175,10 +171,11 @@ div.main-text-container p{
 
 #promocao{
     width: 100vw;
-    margin-top: 5rem;
-    background: #242829 url('../imagens/bg_image.jpg') no-repeat center center;
-    background-attachment: fixed;
-    color: #F5FEFD;
+    color: #010101;
+}
+
+#promocao .section-title{
+    font-size: 2.5rem;
 }
 
 #promocao .container-wrapper{
@@ -207,7 +204,7 @@ div.main-text-container p{
 .cupom-card p{
     max-width: 500px;
     max-height: 500px;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 
@@ -243,18 +240,34 @@ div.main-text-container p{
 
 /*Curso*/
 section#curso{
-    width: 75vw;
+    width: 100vw;
+    background: rgba(14,16,16,.6) url('../imagens/bg_image.jpg') no-repeat top left;
+    background-attachment: fixed;
     margin: 0 auto;
-    padding: 0;
+    padding: 5rem;
+}
+
+#curso .section-title{
+    color: #F5FEFD;
+    
+    font-size: 2rem;
+}
+
+.title-curso{
+    font-size: 1.8rem;
+    color: #F5FEFD;
+}
+
+#curso p{
+    color: #F5FEFD;
 }
 
 /*Augusto Backes*/
 #augusto-backes{
     width: 100vw;
-    margin-top: 5rem;
-    background: #242829 url('../imagens/bg_image.jpg') no-repeat center center;
+    background: #F5FEFD;
     background-attachment: fixed;
-    color: #F5FEFD;
+    color: #010101;
 }
 
 #augusto-backes .container-wrapper{
@@ -264,9 +277,17 @@ section#curso{
     box-sizing: border-box;
 }
 
+#augusto-backes div.main-text-container p{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#augusto-backes .section-title{
+    font-size: 2rem;
+}
+
 section div.augusto-backes-wrapper{
     display: flex;
-    align-items: center;
     justify-content: space-between;
  }
 
@@ -290,11 +311,9 @@ section div.augusto-backes-wrapper{
 /* Media queries*/
 
 /* Tablets e notebooks */
-@media (min-device-width: 760px) 
+@media screen and (min-device-width: 760px) 
   and (max-device-width: 1024px) {
-    body{
-        overflow: hidden;
-    }
+    
     header h1.main-title{
         color: #F5FEFD;
         font-size: 2rem;
@@ -304,6 +323,7 @@ section div.augusto-backes-wrapper{
         font-size: 1.2rem;
         margin: 0 2rem;
     }
+
 
     /*black friday*/
     div.main-banner img{
@@ -365,19 +385,26 @@ section div.augusto-backes-wrapper{
 }
 
 /* celulares */
-@media (min-device-width: 200px) 
+@media screen and (min-device-width: 200px) 
   and (max-device-width: 759px)
   {
     .container-title{
         flex-direction:row;
         
     }
+
+    section#curso{
+        width: 100vw;
+        background: rgba(14,16,16,.6) url('../imagens/bg_image.jpg') no-repeat top left;
+        background-attachment: fixed;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+    
     header{
         background: #010101;
         position: fixed;
         width: 100vw;
-        height: 15vh;
-
         padding: 1.5rem;
         box-sizing: border-box;
     }
@@ -421,6 +448,10 @@ section div.augusto-backes-wrapper{
         margin: 0;
         padding: 0;
     }
+
+    #promocao{
+        margin-top: 2.5rem;
+    }
     
 
 
@@ -430,13 +461,14 @@ section div.augusto-backes-wrapper{
         margin-right: 20px;
     }
 
-    /* Black friday */
-    section#black-friday{
-        margin-top: 18vh;
+    #curso p{
+        width: 90vw;
     }
+
     
     section div.black-friday-wrapper{
         flex-direction: column;
+        align-items: center;
      }
 
      div.main-text-container{
@@ -475,9 +507,4 @@ section div.augusto-backes-wrapper{
         justify-content: space-between;
         flex-direction: column-reverse;
      }
-
-     #augusto-backes,#promocao{
-        background: #242829 url('../imagens/bg_image_mobile.jpg') no-repeat center center;
-        background-attachment: fixed;
-    }
 }
