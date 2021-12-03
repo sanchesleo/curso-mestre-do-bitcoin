@@ -311,6 +311,79 @@ section div.augusto-backes-wrapper{
 /* Media queries*/
 
 /* Tablets e notebooks */
+@media screen  and (max-device-width: 1239px) {
+  
+  header h1.main-title{
+      color: #F5FEFD;
+      font-size: 2rem;
+  }
+
+  ul.lista-menu li a{
+      font-size: 1.2rem;
+      margin: 0 2rem;
+  }
+
+
+  /*black friday*/
+  div.main-banner img{
+      max-width: 260px;
+      border: 5px solid #FFC138;
+  }
+
+  div.main-text-container h3{
+      font-size: 1.2rem;
+  }
+  
+  div.main-text-container p{
+      font-size: 1rem;
+  }
+
+  div.main-text-container button{
+      padding: 1rem 4rem;
+  }
+
+  
+  div.main-text-container button a{
+      font-size: 1rem;
+  }
+
+  /* estilização promocao */
+  .cupom-card h2{
+      font-size: 1.1rem;
+  }
+  .video-card h2{
+      font-size: 1.1rem;
+  }
+
+  .cupom-card img{
+      max-width: 300px;
+      max-height: 300px;
+      width: 100%;
+  }
+  .cupom-card p{
+      max-width: 300px;
+      max-height: 300px;
+      font-size: 1rem;
+  }
+
+  .video-card iframe{
+      max-width: 300px;
+      max-height: 300px;
+      width: 80%;
+      border: 5px solid #FFC138;
+  }
+
+  .btn-style{
+      padding: 1rem 3rem;
+  }
+  
+  .btn-style a{
+      font-size: 1rem;
+  }
+
+}
+
+/* Tablets e notebooks */
 @media screen and (min-device-width: 760px) 
   and (max-device-width: 1024px) {
     
