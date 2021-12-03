@@ -8,9 +8,6 @@ function handleRenderMenu() {
     const navMenu = document.querySelector('.lista-menu');
     navMenu.classList.toggle('active');
 
-    console.log(iconMobile);
-
-    console.log(iconMobile.classList.contains('fa-bars'))
     if (iconMobile.classList.contains('fa-bars')) {
         iconMobile.classList.remove('fa-bars');
         iconMobile.classList.add('fa-times');
