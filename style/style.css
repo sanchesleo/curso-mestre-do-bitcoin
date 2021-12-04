@@ -37,7 +37,7 @@ header{
 
     width: 100vw;
 
-    padding: 1.5rem;
+    padding: 0.5rem;
     box-sizing: border-box;
 }
 
@@ -68,6 +68,7 @@ span.span-title{
 nav ul.lista-menu{
     display: flex;
     justify-content: center;
+    margin-top: 1.5rem;
 }
 
 ul.lista-menu li a{
@@ -130,6 +131,11 @@ div.main-banner img{
     max-width: 500px;
     width: 100%;
     border: 5px solid #FFC138;
+}
+
+.augusto-backes-foto{
+    max-width: 360px;
+    width: 100%;
 }
 
 div.main-text-container{
@@ -202,15 +208,16 @@ div.main-text-container p{
 }
 
 .cupom-card p{
-    max-width: 500px;
-    max-height: 500px;
+    max-width: 400px;
+    max-height: 400px;
     font-size: 1.5rem;
+    text-align: center;
 }
 
 
 .cupom-card img{
-    max-width: 500px;
-    max-height: 500px;
+    max-width: 400px;
+    max-height: 400px;
     width: 100%;
     border: 5px solid #FFC138;
     margin: 1.3rem 0;
@@ -227,9 +234,8 @@ div.main-text-container p{
 }
 
 .video-card iframe{
-    max-width: 500px;
-    max-height: 500px;
-    width: 100%;
+    max-height: 400px;
+    width: 40vw;
     height: 100%;
     border: 5px solid #FFC138;
     margin: 1.3rem 0;
@@ -292,9 +298,10 @@ section div.augusto-backes-wrapper{
  }
 
  section div.augusto-backes-wrapper img{
+    margin-top: -84px;
     max-width: 500px;
     width: 100%;
-    border: none;
+    
  }
 
  /* Footer */
@@ -367,9 +374,6 @@ section div.augusto-backes-wrapper{
   }
 
   .video-card iframe{
-      max-width: 300px;
-      max-height: 300px;
-      width: 80%;
       border: 5px solid #FFC138;
   }
 
@@ -386,6 +390,13 @@ section div.augusto-backes-wrapper{
 /* Tablets e notebooks */
 @media screen and (min-device-width: 760px) 
   and (max-device-width: 1024px) {
+
+    #augusto-backes .container-wrapper{
+        width: 95vw;
+        margin: 0 auto;
+        padding: 2rem 0;
+        box-sizing: border-box;
+    }
     
     header h1.main-title{
         color: #F5FEFD;
@@ -461,6 +472,13 @@ section div.augusto-backes-wrapper{
 @media screen and (min-device-width: 200px) 
   and (max-device-width: 759px)
   {
+
+    section div.augusto-backes-wrapper img{
+        margin-top: 0px;
+        max-width: 500px;
+        width: 100%;
+        
+     }
     .container-title{
         flex-direction:row;
         
@@ -582,7 +600,7 @@ section div.augusto-backes-wrapper{
      }
 
      div.main-banner img{
-        max-width: 200px;
+        max-width: 250px;
         border: 5px solid #FFC138;
     }
 }
